@@ -71,7 +71,7 @@ def bear(k,l):
     middle_trianle(20 - k, 110 + l, 225, 50, "white", "blue")
     parallelogramm(-5 - k, 62 + l, -50, 30, "white", "green")
     square(20 - k, 80 + l, 0, 30, "white", "purple")
-    big_trianle(78 - k, 80 + l, 135,40, "white", "magenta")
+    big_trianle(78 - k, 80 + l, 135, 40, "white", "magenta")
 
 bear(200,200)
 turtle.done()
