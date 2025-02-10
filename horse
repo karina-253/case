@@ -1,0 +1,77 @@
+import turtle
+turtle.speed(15)
+
+def big_trianle(x,y,z,length,color_line,color_filling):
+    turtle.up()
+    turtle.goto(x,y)
+    turtle.seth(z)
+    turtle.down()
+    turtle.color(color_line,color_filling)
+    turtle.begin_fill()
+    turtle.forward(length)
+    turtle.left(135)
+    turtle.forward((length**2/2)**0.5)
+    turtle.left(90)
+    turtle.forward((length**2/2)**0.5)
+    turtle.right(135)
+    turtle.end_fill()
+
+
+def middle_trianle(x, y,z, length, color_line, color_filling):
+    turtle.up()
+    turtle.goto(x, y)
+    turtle.seth(z)
+    turtle.color(color_line, color_filling)
+    turtle.begin_fill()
+    turtle.forward(2**0.5*length)
+    turtle.left(135)
+    turtle.forward(length)
+    turtle.left(90)
+    turtle.forward(length)
+    turtle.right(90)
+    turtle.end_fill()
+
+
+def square(x,y,z,length,color_line,color_filling):
+    turtle.up()
+    turtle.goto(x,y)
+    turtle.seth(z)
+    turtle.color(color_line,color_filling)
+    turtle.begin_fill()
+    turtle.forward(length)
+    turtle.left(90)
+    turtle.forward(length)
+    turtle.left(90)
+    turtle.forward(length)
+    turtle.left(90)
+    turtle.forward(length)
+    turtle.end_fill()
+    turtle.right(45)
+
+
+def parallelogramm(x, y,z, length, color_line, color_filling):
+        turtle.up()
+        turtle.goto(x, y)
+        turtle.seth(z)
+        turtle.color(color_line, color_filling)
+        turtle.begin_fill()
+        turtle.forward(length)
+        turtle.left(45)
+        turtle.forward(length/2*2**0.5)
+        turtle.left(135)
+        turtle.forward(length)
+        turtle.left(45)
+        turtle.forward(length/2*2**0.5)
+        turtle.end_fill()
+
+def horse(k,l):
+    big_trianle(-30 - k, 100 + l, 0, 50, "white", "blue")
+    square(-10 - k, 70 + l, 0, 30, "white", "purple")
+    middle_trianle(-50 - k, 70 + l, 315, 70, "white", "pink")
+    big_trianle(-70 - k, 50 + l, 0, 40, "white", "magenta")
+    big_trianle(20 - k, 70 + l, 270, 90, "white", "orange")
+    middle_trianle(20 - k, 0 + l, 225, 30, "white", "yellow")
+    parallelogramm(65 - k, 25 + l, 270, 30, "white", "green")
+
+horse(200,200)
+turtle.done()
